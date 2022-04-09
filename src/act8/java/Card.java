@@ -3,7 +3,7 @@ package act8.java;
 /**
  *
  * @author judi_
- */
+ */ 
 public class Card {
     
     

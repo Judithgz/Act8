@@ -2,9 +2,10 @@ package act8.java;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
+import javax.swing.JOptionPane;
 /**
  *
- * @author judi_
+ * @author judi_ 
  */
 public class Deck {
  
@@ -51,30 +52,54 @@ public class Deck {
         return mazo;
     }
     
-    public void shuflle() {
+    public void shuflle() throws Exception{
+        
+        try{
             Collections.shuffle(mazo);
             System.out.println("Mezclamos el deck.");
             for (Object objeto : mazo)
             {
                 System.out.print(mazo + " /n ");
             }
+        }catch(Exception e){
+            
+            JOptionPane.showMessageDialog(null, "No quedan suficientes cartas.");   
         }
+        }
+    
 
-        public void head(){
+
+        public void head() throws Exception{
+            
+            try{
             System.out.println(mazo.get(0));
             mazo.remove(0);
             System.out.println("Quedan " + mazo.size() + " cartas");
+            }catch(Exception e){
+            
+            JOptionPane.showMessageDialog(null, "No quedan cartas en el Deck.");
+            
+        }
         }
 
 
-        public void pick() {
+        public void pick() throws Exception{
+            
+            try{
             Random random = new Random();
             System.out.println(mazo.get(random.nextInt(mazo.size())));
             mazo.remove(random.nextInt(mazo.size()));
             System.out.println("Quedan " + mazo.size() + " cartas");
+            }catch(Exception e){
+            
+            JOptionPane.showMessageDialog(null, "No quedan suficientes cartas.");
+            
+        }  
         }
 
-        public void hand() {
+        public void hand() throws Exception{
+            
+            try {
             for(int i=0; i<=4; i++){
                 System.out.println(mazo.get(i));
             }
@@ -82,6 +107,11 @@ public class Deck {
                 mazo.remove(i);
             }
             System.out.println("Quedan " + mazo.size()+ " cartas");
+            } catch(Exception e){
+            
+            JOptionPane.showMessageDialog(null, "No quedan suficientes cartas.");
+            
+        }  
         }
 
     

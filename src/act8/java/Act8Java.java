@@ -1,4 +1,4 @@
-package act8.java;
+package act8.java; 
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Act8Java {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         
         Scanner line = new Scanner(System.in);
         
